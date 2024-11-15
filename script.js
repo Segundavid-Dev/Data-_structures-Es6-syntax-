@@ -157,11 +157,43 @@ console.log(newStr);
 
 // Practical Examples
 const ingridients = [
-  prompt("Let's make pasta!Ingrident 1?"),
-  prompt("Let's make pasta!Ingrident 2?"),
-  prompt("Let's make pasta!Ingrident 3?"),
+  // prompt("Let's make pasta!Ingrident 1?"),
+  // prompt("Let's make pasta!Ingrident 2?"),
+  // prompt("Let's make pasta!Ingrident 3?"),
 ];
 
 console.log(ingridients);
 // call the objects methods with the spread operator
 resturant.orderPasta(...ingridients); // destructs the array values into strings seperated by comma
+
+// spread, because on right side of =
+const array = [1, 2, ...[3, 4]];
+console.log(array);
+// REST OPERATOR
+const [A, B, ...others] = [1, 2, 3, 4, 5];
+console.log(A, B, others);
+
+const [pizza, , Risotto, ...otherFood] = [
+  ...resturant.mainMenu,
+  ...resturant.starterMenu,
+];
+console.log(pizza, Risotto, otherFood);
+
+// objects
+const { saturday, ...weekdays } = resturant.openingHours;
+console.log(weekdays);
+// Creating a function to add an arbitrary number of arguments in the function
+const add = function (...numbers) {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+  console.log(sum);
+};
+
+add(2, 3);
+add(5, 3, 7, 2);
+add(8, 2, 5, 3, 1, 4);
+
+const x = [23, 5, 7];
+add(...x);
