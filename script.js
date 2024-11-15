@@ -78,6 +78,11 @@ const resturant = {
       `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
     );
   },
+  orderPasta: function (ingrident1, ingrident2, ingrident3) {
+    console.log(
+      `Here is your delicious pasta with ${ingrident1}, ${ingrident2} and ${ingrident3}`
+    );
+  },
 };
 
 // call the object methods
@@ -118,4 +123,45 @@ const {
 } = openingHours;
 console.log(open, close);
 
-// Practical Application
+// Spread Operator
+const arr = [7, 8, 9];
+// create a new array based on the current array and add new arrays to the end of the array
+const badNewArray = [1, 2, arr[0], arr[1], arr[2]];
+console.log(badNewArray);
+
+// SPREAD OPERATOR (...array)-- take all the values from an array and write it into a new array
+const goodNewArray = [1, 2, ...arr];
+
+console.log(...goodNewArray);
+
+const newMenu = [...resturant.mainMenu, "Gnoccci"];
+console.log(newMenu);
+
+// use cases of the spread opearor
+
+// - create shallow copeies of array
+const mainMenuCopy = [...resturant.mainMenu];
+
+// -merge two ahrrays together
+const firstNames = ["ibrahim", "adebayo", "dalha"];
+const lastNames = ["Segun", "Adekunle", "Salami"];
+
+const mergeNames = [...firstNames, ...lastNames];
+console.log(mergeNames);
+
+// Spread Operator dosen't only work on array but can work on so called iterables
+const str = "David";
+// create an array containing each individual letters alongside other letters
+const newStr = [...str, "", "S."];
+console.log(newStr);
+
+// Practical Examples
+const ingridients = [
+  prompt("Let's make pasta!Ingrident 1?"),
+  prompt("Let's make pasta!Ingrident 2?"),
+  prompt("Let's make pasta!Ingrident 3?"),
+];
+
+console.log(ingridients);
+// call the objects methods with the spread operator
+resturant.orderPasta(...ingridients); // destructs the array values into strings seperated by comma
