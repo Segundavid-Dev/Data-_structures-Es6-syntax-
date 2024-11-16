@@ -197,3 +197,19 @@ add(8, 2, 5, 3, 1, 4);
 
 const x = [23, 5, 7];
 add(...x);
+
+console.log(3 || "Jonas");
+
+// short circuiting -boolean values
+// resturant.numGuest = 23;
+const guess1 = resturant.numGuest ? resturant.numGuest : 10;
+console.log(guess1);
+
+// we can take advantage of short circuting
+const guess2 = resturant.numGuest || 10;
+console.log(guess2);
+
+// short circuting AND operars
+console.log("-----AND-----");
+console.log(0 && "Jonas");
+console.log(7 && "Jonas");
