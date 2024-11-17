@@ -213,3 +213,32 @@ console.log(guess2);
 console.log("-----AND-----");
 console.log(0 && "Jonas");
 console.log(7 && "Jonas");
+
+// Javascript Performance
+// Avoid unnesscary variables
+let fullName = firstName + " " + lastName;
+document.getElementById("demo").innerHTML = fullName;
+// stop creating javascript variables uneccessary
+
+// Delay Javascript loading
+
+// Named indexes and numbered indexes
+// debugger keyword
+// arrow function
+
+const hello = function () {
+  return "hello world";
+};
+
+// arrow functions
+const greetings = (name) => {
+  `hello ${name}`;
+};
+// call function
+greetings("david");
+
+// Nullish collascing operator
+// works with the idea of nullish values
+// Nullish: null and undefined (NOT 0 or '')
+const guessCorrect = resturant.numGuests ?? 10;
+console.log(guessCorrect);
