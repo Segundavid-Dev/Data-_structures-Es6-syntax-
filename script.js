@@ -242,3 +242,24 @@ greetings("david");
 // Nullish: null and undefined (NOT 0 or '')
 const guessCorrect = resturant.numGuests ?? 10;
 console.log(guessCorrect);
+
+// nullish operator
+const resturant1 = {
+  name: "Capri",
+  numGuests: 20,
+};
+
+const resturant2 = {
+  name: "La piazza",
+  owner: "Giovanni Rossi",
+};
+
+// OR operator
+resturant2.numGuest = resturant1.numGuests || 10;
+resturant2.numGuest = resturant2.numGuest || 10;
+
+// OR assignment operator
+resturant1.numGuests ||= 10;
+resturant2.numGuests ||= 10;
+
+// coding challenge
