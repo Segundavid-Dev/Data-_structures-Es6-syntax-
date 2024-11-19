@@ -263,3 +263,13 @@ resturant1.numGuests ||= 10;
 resturant2.numGuests ||= 10;
 
 // coding challenge
+
+// destructuring the original array
+
+// looping over arrays
+const Menu = [...resturant.starterMenu, ...resturant.mainMenu];
+
+// for of loop
+for (const item of menu) {
+  console.log(item);
+}
