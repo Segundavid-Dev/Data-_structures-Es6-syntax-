@@ -270,6 +270,13 @@ resturant2.numGuests ||= 10;
 const Menu = [...resturant.starterMenu, ...resturant.mainMenu];
 
 // for of loop
-for (const item of menu) {
+for (const item of Menu) {
   console.log(item);
 }
+
+// iterate over each array, contains the element and poition of the array
+for (const item of Menu.entries()) {
+  console.log(item);
+}
+
+// Enhanced object literal
