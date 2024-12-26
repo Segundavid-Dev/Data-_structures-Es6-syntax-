@@ -3,26 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Data Strucures And Modern Operators</title>
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <style>
-    * {
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: Verdana, Geneva;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-    }
-  </style>
   <body>
-    <h1>Data Strucures And Modern Operators</h1>
+    <header class="header" id="header">
+      <nav class="nav container" id="nav">
+        <div class="logo">LOGO</div>
+        <ul class="nav__menu" id="nav__menu">
+          <li class="nav__list" id="nav__list">
+            <a href="#" class="nav__item">Home</a>
+          </li>
 
-    <script src="script.js"></script>
+          <li class="nav__list" id="nav__list">
+            <a href="#" class="nav__item">About</a>
+          </li>
+
+          <li class="nav__list" id="nav__list">
+            <a href="#" class="nav__item">Contact</a>
+          </li>
+
+          <li class="nav__list" id="nav__list">
+            <a href="#" class="nav__item">Address</a>
+          </li>
+        </ul>
+
+        <ul class="social__media">
+          <li>
+            <i>🚀</i>
+          </li>
+
+          <li>
+            <i>⚡</i>
+          </li>
+
+          <li>
+            <i>⚽</i>
+          </li>
+        </ul>
+
+        <div class="toggle">
+          <span class="open">❌</span>
+        </div>
+      </nav>
+    </header>
+
+    <script src="./script.js"></script>
   </body>
 </html>

@@ -1,0 +1,95 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  font-size: 14px;
+}
+
+.container {
+  margin: 0 3vw;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  padding: 1rem 0;
+}
+
+.nav,
+.nav__menu,
+.social__media {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo,
+.nav__menu li a {
+  font-weight: 500;
+  color: #111;
+}
+
+.nav__menu li {
+  margin-right: 5rem;
+}
+
+.toggle {
+  cursor: pointer;
+  display: none;
+}
+
+/* styling for mobile responsiveness */
+@media screen and (max-width: 920px) {
+  /* display toggle */
+  .toggle {
+    display: block;
+  }
+
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100000;
+    background-color: #333;
+  }
+
+  .logo {
+    color: #fff;
+  }
+
+  .nav__menu {
+    flex-direction: column;
+    position: fixed;
+    left: -100%;
+    top: 4rem;
+    padding-top: 2rem;
+    transition: all 0.6s ease-in;
+    /* width: 100%; */
+  }
+
+  .nav__menu li {
+    margin: 3rem;
+    color: #fff;
+  }
+
+  .social__media {
+    display: none;
+  }
+}
+
+/* open toggle class style */
+.open {
+  left: 0;
+  transition: all 0.6s ease-in;
+}
