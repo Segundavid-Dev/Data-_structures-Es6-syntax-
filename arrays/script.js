@@ -43,3 +43,23 @@ console.log(arr3.at(0));
 // get last array element
 console.log(arr3[arr3.length - 1]);
 console.log(arr3.at(-1));
+
+// looping over an array
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+for (const movement of movements) {
+  if (movement > 0) {
+    console.log(`You desposited ${movement}`);
+  } else {
+    console.log(`you withdrew ${Math.abs(movement)}`);
+  }
+}
+
+// Accessing index from for of arrays
+movements.forEach((movement, index, array) => {
+  if (movement > 0) {
+    console.log(`you deposited ${movement}`);
+  } else {
+    console.log(`you withdrew ${Math.abs(movement)}`);
+  }
+});
