@@ -34,3 +34,12 @@ console.log(letters);
 
 // JOIN METHODS ->
 console.log(letters.join(" - "));
+
+// AT METHOD
+const arr3 = [23, 11, 64];
+console.log(arr3[0]);
+console.log(arr3.at(0));
+
+// get last array element
+console.log(arr3[arr3.length - 1]);
+console.log(arr3.at(-1));
