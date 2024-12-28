@@ -63,3 +63,34 @@ movements.forEach((movement, index, array) => {
     console.log(`you withdrew ${Math.abs(movement)}`);
   }
 });
+
+// For each is also available on maps and sets
+
+// forEach method with a map
+const currencies = new Map([
+  ["USD", "United States dollar"],
+  ["EUR", "Euro"],
+  ["GBP", "Pound Sterling"],
+]);
+
+currencies.forEach((value, key, map) => {
+  console.log(`${key}: ${value}`);
+});
+
+// forEach method with a set
+
+// working with objects
+const myObject = {
+  name: {
+    firstName: "Segun",
+    lastName: "David",
+  },
+  hobbies: ["coding", "watching anime", "sleeping", "watching youtube"],
+  age: 19,
+  sentence: function () {
+    console.log(`${this.name.lastName} is a goog boy`);
+  },
+};
+
+myObject.sentence();
+// console.log(typeof myObject);
