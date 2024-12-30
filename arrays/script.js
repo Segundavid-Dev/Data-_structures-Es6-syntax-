@@ -88,7 +88,7 @@ const myObject = {
   hobbies: ["coding", "watching anime", "sleeping", "watching youtube"],
   age: 19,
   sentence: function () {
-    console.log(`${this.name.lastName} is a goog boy`);
+    console.log(`${this.name.lastName} is a goo boy`);
   },
 };
 
