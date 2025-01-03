@@ -1,34 +1,21 @@
 "use strict";
 
-// list in javascript -> a list in javascript is a nested set of  object where the first object hold reference to the second, the second to the third and so on
+// perform data manipulationl
+let users = [
+  { id: 1, name: "John" },
+  { id: 2, name: "Pete" },
+  { id: 3, name: "Mary" },
+];
 
-let list = {
-  value: 1,
-  rest: {
-    value: 2,
-    rest: {
-      value: 3,
-      rest: null,
-    },
-  },
-};
+let transformArray = users.filter((item) => item.id < 3);
+console.log(transformArray);
 
-const arrayToList = function (a, b, c) {
-  let array = [a, b, c];
-  return array;
-};
+// array map methods
+let lengths = ["Gadaffi", "Tinubu", "Olusheye"];
 
-const output = arrayToList(1, 2, 3);
-console.log(new Array(output));
+console.log(lengths.map((item) => item));
 
-let list2 = {
-  value: output[0],
-  rest: {
-    value: output[1],
-    rest: {
-      value: output[3],
-    },
-  },
-};
+let arr = [1, 2, 3, 4, 5];
 
-console.log(list2);
+let result = arr.reduce((sum, current) => sum + current);
+console.log(result);
